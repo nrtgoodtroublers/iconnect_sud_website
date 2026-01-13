@@ -28,18 +28,11 @@
   padding: 0;
 }
 
-/* Assuming 'b:root' was a typo and intended to be 'body' or a new global style.
-   Given the context of adding global height styles and fixing layout,
-   and to maintain syntactic correctness, the properties from the 'b:root'
-   block are added to the existing 'body' selector, and the new height rules are added.
-   The original font-family and color variables are preserved as they are specific
-   to the existing design system. */
 body {
   font-family: var(--font-main);
   color: var(--color-text);
   background-color: var(--color-white);
   line-height: 1.6;
-  /* Added from the 'b:root' block, adjusted to fit existing design */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
