@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary-dark: #592F54;
+  --color-primary-green: #287848;
+  --color-secondary-blue: #86BBD8;
+  --color-accent-yellow: #F6AE2D;
+  --color-accent-orange: #F26419;
+  --color-white: #ffffff;
+  --color-light-gray: #f8f9fa;
+  --color-text: #333333;
+
+  --font-main: 'Outfit', sans-serif;
+
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --border-radius: 20px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Assuming 'b:root' was a typo and intended to be 'body' or a new global style.
+   Given the context of adding global height styles and fixing layout,
+   and to maintain syntactic correctness, the properties from the 'b:root'
+   block are added to the existing 'body' selector, and the new height rules are added.
+   The original font-family and color variables are preserved as they are specific
+   to the existing design system. */
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  /* Added from the 'b:root' block, adjusted to fit existing design */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent-orange);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #d55312;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: #1e5c36;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-2 {
+  margin-bottom: var(--spacing-md);
+}
+
+
+/* Global Page Header */
+.page-header {
+  background-color: var(--color-primary-dark);
+  padding: 4rem 0;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
