@@ -7,6 +7,53 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/register",
+        "destination": "https://app.iconnectcounseling.org/register",
+        "type": 301
+      },
+      {
+        "source": "/login",
+        "destination": "https://app.iconnectcounseling.org/login",
+        "type": 301
+      },
+      {
+        "source": "/logout",
+        "destination": "https://app.iconnectcounseling.org/logout",
+        "type": 301
+      },
+      {
+        "source": "/password_reset",
+        "destination": "https://app.iconnectcounseling.org/password_reset",
+        "type": 301
+      },
+      {
+        "source": "/request_activation",
+        "destination": "https://app.iconnectcounseling.org/request_activation",
+        "type": 301
+      },
+      {
+        "source": "/activate/**",
+        "destination": "https://app.iconnectcounseling.org/activate",
+        "type": 301
+      },
+      {
+        "source": "/reset/**",
+        "destination": "https://app.iconnectcounseling.org/reset",
+        "type": 301
+      },
+      {
+        "source": "/admin/**",
+        "destination": "https://app.iconnectcounseling.org/admin",
+        "type": 301
+      },
+      {
+        "source": "/accounts/**",
+        "destination": "https://app.iconnectcounseling.org/accounts",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",
