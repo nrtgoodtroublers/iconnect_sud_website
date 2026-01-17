@@ -52,6 +52,61 @@
         "source": "/accounts/**",
         "destination": "https://app.iconnectcounseling.org/accounts",
         "type": 301
+      },
+      {
+        "source": "/record/:slug",
+        "destination": "https://app.iconnectcounseling.org/record/:slug",
+        "type": 301
+      },
+      {
+        "source": "/add_resource",
+        "destination": "https://app.iconnectcounseling.org/add_resource",
+        "type": 301
+      },
+      {
+        "source": "/update_resource/:slug",
+        "destination": "https://app.iconnectcounseling.org/update_resource/:slug",
+        "type": 301
+      },
+      {
+        "source": "/delete_record/:slug",
+        "destination": "https://app.iconnectcounseling.org/delete_record/:slug",
+        "type": 301
+      },
+      {
+        "source": "/disable_record/:slug",
+        "destination": "https://app.iconnectcounseling.org/disable_record/:slug",
+        "type": 301
+      },
+      {
+        "source": "/upload_csv",
+        "destination": "https://app.iconnectcounseling.org/upload_csv",
+        "type": 301
+      },
+      {
+        "source": "/profile/:username",
+        "destination": "https://app.iconnectcounseling.org/profile/:username",
+        "type": 301
+      },
+      {
+        "source": "/profile/:username/my_resources",
+        "destination": "https://app.iconnectcounseling.org/profile/:username/my_resources",
+        "type": 301
+      },
+      {
+        "source": "/profile/:username/my_resources/:slug",
+        "destination": "https://app.iconnectcounseling.org/profile/:username/my_resources/:slug",
+        "type": 301
+      },
+      {
+        "source": "/profile/:username/:slug",
+        "destination": "https://app.iconnectcounseling.org/profile/:username/:slug",
+        "type": 301
+      },
+      {
+        "source": "/api/**",
+        "destination": "https://app.iconnectcounseling.org/api",
+        "type": 301
       }
     ],
     "rewrites": [
