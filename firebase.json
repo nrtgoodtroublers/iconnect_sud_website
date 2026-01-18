@@ -9,6 +9,36 @@
     ],
     "redirects": [
       {
+        "source": "/mobile/**",
+        "destination": "https://app.iconnectcounseling.org/mobile/:splat",
+        "type": 301
+      },
+      {
+        "source": "/api/**",
+        "destination": "https://app.iconnectcounseling.org/api/:splat",
+        "type": 301
+      },
+      {
+        "source": "/admin/**",
+        "destination": "https://app.iconnectcounseling.org/admin/:splat",
+        "type": 301
+      },
+      {
+        "source": "/accounts/**",
+        "destination": "https://app.iconnectcounseling.org/accounts/:splat",
+        "type": 301
+      },
+      {
+        "source": "/activate/**",
+        "destination": "https://app.iconnectcounseling.org/activate/:splat",
+        "type": 301
+      },
+      {
+        "source": "/reset/**",
+        "destination": "https://app.iconnectcounseling.org/reset/:splat",
+        "type": 301
+      },
+      {
         "source": "/register",
         "destination": "https://app.iconnectcounseling.org/register",
         "type": 301
@@ -31,26 +61,6 @@
       {
         "source": "/request_activation",
         "destination": "https://app.iconnectcounseling.org/request_activation",
-        "type": 301
-      },
-      {
-        "source": "/activate/**",
-        "destination": "https://app.iconnectcounseling.org/activate",
-        "type": 301
-      },
-      {
-        "source": "/reset/**",
-        "destination": "https://app.iconnectcounseling.org/reset",
-        "type": 301
-      },
-      {
-        "source": "/admin/**",
-        "destination": "https://app.iconnectcounseling.org/admin",
-        "type": 301
-      },
-      {
-        "source": "/accounts/**",
-        "destination": "https://app.iconnectcounseling.org/accounts",
         "type": 301
       },
       {
@@ -101,11 +111,6 @@
       {
         "source": "/profile/:username/:slug",
         "destination": "https://app.iconnectcounseling.org/profile/:username/:slug",
-        "type": 301
-      },
-      {
-        "source": "/api/**",
-        "destination": "https://app.iconnectcounseling.org/api",
         "type": 301
       }
     ],
