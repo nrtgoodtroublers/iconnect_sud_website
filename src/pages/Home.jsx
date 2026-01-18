@@ -6,9 +6,15 @@ import directorImg from '../assets/siddhartha_sikdar.jpg';
 import danielImg from '../assets/Daniel.jpg';
 import './Home.css';
 
+import { Helmet } from 'react-helmet-async';
+
 const Home = () => {
     return (
         <div className="home-page">
+            <Helmet>
+                <title>iConnect SUD | Bridging Human Connections</title>
+                <meta name="description" content="iCONNECT is a non-profit organization dedicated to making substance use recovery accessible, supportive, and community-driven through technology and connection." />
+            </Helmet>
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-overlay"></div>

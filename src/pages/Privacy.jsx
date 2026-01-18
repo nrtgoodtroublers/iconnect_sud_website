@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import './Privacy.css';
 
 const Privacy = () => {
     return (
         <div className="privacy-page">
+            <Helmet>
+                <title>Privacy Policy | iConnect SUD</title>
+                <meta name="description" content="Read our Privacy Policy to understand how we collect, use, and protect your information." />
+            </Helmet>
             <div className="container">
                 <h1>Privacy Policy</h1>
                 <p className="last-updated">Last Updated: January 2026</p>

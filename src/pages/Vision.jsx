@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import communityImg from '../assets/vision_community_circle.png';
 import networkImg from '../assets/vision_ecosystem_network.png';
@@ -8,6 +9,10 @@ import './Vision.css';
 const Vision = () => {
     return (
         <div className="vision-page">
+            <Helmet>
+                <title>Our Vision | iConnect SUD</title>
+                <meta name="description" content="Our vision for a future where recovery is accessible, celebrated, and sustainable through community connection." />
+            </Helmet>
             <div className="page-header">
                 <div className="container">
                     <motion.div

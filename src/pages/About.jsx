@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import ourStoryImg from '../assets/our_story.jpg';
 import multidisciplinaryImg from '../assets/multidisciplinary.jpg';
@@ -10,6 +11,10 @@ import './About.css';
 const About = () => {
     return (
         <div className="about-page">
+            <Helmet>
+                <title>About Us | iConnect SUD</title>
+                <meta name="description" content="Learn about the iConnect SUD mission, our story, and our multidisciplinary approach to substance use recovery." />
+            </Helmet>
             <section className="about-hero">
                 <div className="container">
                     <motion.div

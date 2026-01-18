@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 import appScreen1 from '../assets/app_screen_1.png';
 import appScreen2 from '../assets/app_screen_2.png';
@@ -19,6 +20,10 @@ const AppPage = () => {
 
     return (
         <div className="app-page">
+            <Helmet>
+                <title>Mobile App | iConnect SUD</title>
+                <meta name="description" content="Download the iConnect SUD app for iOS and Android. Find resources, peer support, and recovery tools in your pocket." />
+            </Helmet>
             <div className="page-header">
                 <div className="container">
                     <motion.div

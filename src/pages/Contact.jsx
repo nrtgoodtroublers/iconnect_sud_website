@@ -1,11 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
     return (
         <div className="contact-page">
-
+            <Helmet>
+                <title>Contact Us | iConnect SUD</title>
+                <meta name="description" content="Get in touch with the iConnect team. We are here to help answering your questions or feedback." />
+            </Helmet>
             <section className="section">
                 <div className="container">
                     <div className="contact-grid">
