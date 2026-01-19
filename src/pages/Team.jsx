@@ -1,32 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import siddharthaImg from '../assets/siddhartha_sikdar.jpg';
-import hollyImg from '../assets/holly_matto.jpg';
-import rebeccaImg from '../assets/rebecca.jpg';
-import dylanImg from '../assets/dylan.jpg';
-import padmanabhanImg from '../assets/Padmanabhan.jpg';
-import krithikaImg from '../assets/krithika.png';
-import lillianImg from '../assets/lillian.jpg';
-import siriImg from '../assets/siri.jpeg';
-import hectorImg from '../assets/hector.jpeg';
-import hajrahImg from '../assets/hajrah.jpeg';
-import camilaImg from '../assets/camila.jpeg';
-import gabrielImg from '../assets/gabriel.png';
-import jasmineImg from '../assets/jasmine.jpeg';
 import './Team.css';
 
 const founders = [
     {
         name: 'Rebecca Leung',
         role: 'Co-founder',
-        image: rebeccaImg,
+        image: "/assets/rebecca.jpg",
         link: 'https://www.linkedin.com/in/healthrebeccaleung/'
     },
     {
         name: 'Dylan Scarton',
         role: 'Co-founder',
-        image: dylanImg,
+        image: "/assets/dylan.jpg",
         link: 'https://www.linkedin.com/in/dylan-scarton/'
     }
 ];
@@ -35,25 +22,25 @@ const leadership = [
     {
         name: 'Siddhartha Sikdar, PhD',
         role: 'Principal Investigator',
-        image: siddharthaImg,
+        image: "/assets/siddhartha_sikdar.jpg",
         link: 'https://www.linkedin.com/in/siddhartha-sikdar-b2603a1/'
     },
     {
         name: 'Holly Matto, PhD, MSW',
         role: 'Co-Faculty Mentor',
-        image: hollyImg,
+        image: "/assets/holly_matto.jpg",
         link: 'https://publichealth.gmu.edu/profiles/hmatto'
     },
     {
         name: 'Padmanabhan Seshaiyer, PhD',
         role: 'Co-Faculty Mentor',
-        image: padmanabhanImg,
+        image: "/assets/Padmanabhan.jpg",
         link: 'https://www.linkedin.com/in/padhuseshaiyer/'
     },
     {
         name: 'Jasmine A',
         role: 'Project Coordinator',
-        image: jasmineImg,
+        image: "/assets/jasmine.jpeg",
         link: '#'
     }
 ];
@@ -62,19 +49,19 @@ const techTeam = [
     {
         name: 'Hector Chavarria',
         role: 'CTO',
-        image: hectorImg,
+        image: "/assets/hector.jpeg",
         link: 'https://www.linkedin.com/in/hectorchavarria/'
     },
     {
         name: 'Krithika Jain',
         role: 'Technical Lead',
-        image: krithikaImg,
+        image: "/assets/krithika.png",
         link: 'https://www.linkedin.com/in/krithika-jain/'
     },
     {
         name: 'Gabriel Chavarria',
         role: 'Tech Associate',
-        image: gabrielImg,
+        image: "/assets/gabriel.png",
         link: '#'
     }
 ];
@@ -83,25 +70,25 @@ const interns = [
     {
         name: 'Camila Nicole',
         role: 'Social Media Intern',
-        image: camilaImg,
+        image: "/assets/camila.jpeg",
         link: '#'
     },
     {
         name: 'Hajrah Noor ',
         role: 'Social Media Intern',
-        image: hajrahImg,
+        image: "/assets/hajrah.jpeg",
         link: 'https://www.linkedin.com/in/hajrah-noor/'
     },
     {
         name: 'Lillian Cline',
         role: 'Social Media Intern',
-        image: lillianImg,
+        image: "/assets/lillian.jpg",
         link: 'https://www.linkedin.com/in/lillian-cline-636b91358/'
     },
     {
         name: 'Siri Kalidindi',
         role: 'Social Media Intern',
-        image: siriImg,
+        image: "/assets/siri.jpeg",
         link: 'https://www.linkedin.com/in/siri-kalidindi-093798314/'
     }
 ];

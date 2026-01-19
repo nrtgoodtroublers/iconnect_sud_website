@@ -2,8 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import directorImg from '../assets/siddhartha_sikdar.jpg';
-import danielImg from '../assets/Daniel.jpg';
 import './Home.css';
 
 import { Helmet } from 'react-helmet-async';
@@ -95,7 +93,7 @@ const Home = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src={directorImg}
+                                src="/assets/siddhartha_sikdar.jpg"
                                 alt="Siddhartha Sikdar, PhD"
                                 className="director-img"
                             />
@@ -260,7 +258,7 @@ const Home = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src={danielImg}
+                                src="/assets/Daniel.jpg"
                                 alt="Daniel Adams"
                                 className="director-img"
                             />

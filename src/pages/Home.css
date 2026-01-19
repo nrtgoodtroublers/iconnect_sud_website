@@ -62,7 +62,7 @@
 .hero {
     position: relative;
     /* Using group photo */
-    background-image: url('../assets/hero_bg_final.png');
+    background-image: url('/assets/hero_bg_final.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

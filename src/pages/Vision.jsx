@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import communityImg from '../assets/vision_community_circle.png';
-import networkImg from '../assets/vision_ecosystem_network.png';
-import hollyMattoImg from '../assets/holly_matto.jpg';
 import './Vision.css';
 
 const Vision = () => {
@@ -50,7 +47,7 @@ const Vision = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <img src={communityImg} alt="Community Support" className="vision-img" />
+                            <img src="/assets/vision_community_circle.png" alt="Community Support" className="vision-img" />
                         </motion.div>
                     </div>
                 </div>
@@ -123,7 +120,7 @@ const Vision = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src={hollyMattoImg}
+                                src="/assets/holly_matto.jpg"
                                 alt="Holly Matto, PhD, MSW"
                                 className="director-img"
                             />
@@ -147,7 +144,7 @@ const Vision = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <img src={networkImg} alt="Network Ecosystem" className="vision-img" />
+                            <img src="/assets/vision_ecosystem_network.png" alt="Network Ecosystem" className="vision-img" />
                         </motion.div>
                         <motion.div
                             className="vision-text-block"

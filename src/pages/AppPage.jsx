@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
-import appScreen1 from '../assets/app_screen_1.png';
-import appScreen2 from '../assets/app_screen_2.png';
-import appScreen3 from '../assets/app_screen_3.png';
 import './AppPage.css';
 
 const AppPage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const images = [appScreen1, appScreen2, appScreen3];
+    const images = [
+        '/assets/app_screen_1.png',
+        '/assets/app_screen_2.png',
+        '/assets/app_screen_3.png'
+    ];
 
     useEffect(() => {
         const timer = setInterval(() => {

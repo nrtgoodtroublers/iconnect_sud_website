@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Layout.css';
 import { FaInstagram, FaLinkedin, FaTiktok, FaFacebook, FaTwitter } from 'react-icons/fa';
-import iconnectLogo from '../assets/iconnect_logo.png';
 
 const Layout = ({ children }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +25,7 @@ const Layout = ({ children }) => {
                 <div className="container header-content">
                     <Link to="/" className="logo-link" onClick={closeMenu}>
                         <img
-                            src={iconnectLogo}
+                            src="/assets/iconnect_logo.png"
                             alt="iConnect Logo"
                             className="nav-logo-img"
                         />
@@ -63,7 +62,7 @@ const Layout = ({ children }) => {
                     <div className="footer-left">
                         <Link to="/" className="footer-logo-link">
                             <img
-                                src={iconnectLogo}
+                                src="/assets/iconnect_logo.png"
                                 alt="iConnect Logo"
                                 className="footer-logo-img"
                             />

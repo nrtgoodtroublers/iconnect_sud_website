@@ -1,11 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import ourStoryImg from '../assets/our_story.jpg';
-import multidisciplinaryImg from '../assets/multidisciplinary.jpg';
-import value1Img from '../assets/value1.jpg';
-import value2Img from '../assets/value2.jpg';
-import value3Img from '../assets/value3.jpg';
 import './About.css';
 
 const About = () => {
@@ -55,7 +50,7 @@ const About = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src={ourStoryImg}
+                                src="/assets/our_story.jpg"
                                 alt="Our Story - Community Connection"
                                 className="about-img"
                             />
@@ -70,7 +65,7 @@ const About = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src={multidisciplinaryImg}
+                                src="/assets/multidisciplinary.jpg"
                                 alt="Collaboration Illustration"
                                 className="about-img"
                             />
@@ -117,7 +112,7 @@ const About = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
                         >
-                            <img src={value1Img} alt="Empathy" className="value-img" />
+                            <img src="/assets/value1.jpg" alt="Empathy" className="value-img" />
                             <h3>Empathy</h3>
                             <p>We approach every individual with understanding and without judgment.</p>
                         </motion.div>
@@ -128,7 +123,7 @@ const About = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
                         >
-                            <img src={value2Img} alt="Innovation" className="value-img" />
+                            <img src="/assets/value2.jpg" alt="Innovation" className="value-img" />
                             <h3>Innovation</h3>
                             <p>Leveraging technology to create new pathways for support and recovery.</p>
                         </motion.div>
@@ -139,7 +134,7 @@ const About = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.3 }}
                         >
-                            <img src={value3Img} alt="Community" className="value-img" />
+                            <img src="/assets/value3.jpg" alt="Community" className="value-img" />
                             <h3>Community</h3>
                             <p>Building strong networks that foster belonging and mutual aid.</p>
                         </motion.div>
