@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './Contact.css';
 
 const Contact = () => {
+    const form = useRef();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState({ type: '', message: '' });
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setStatus({ type: '', message: '' });
+
+        // Keys from environment variables
+        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                setStatus({ type: 'success', message: 'Message sent successfully!' });
+                setIsSubmitting(false);
+                e.target.reset();
+            }, (error) => {
+                console.log(error.text);
+                setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+                setIsSubmitting(false);
+            });
+    };
+
     return (
         <div className="contact-page">
             <Helmet>
@@ -64,21 +92,14 @@ const Contact = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <form className="contact-form" onSubmit={(e) => {
-                                e.preventDefault();
-                                const name = e.target.name.value;
-                                const email = e.target.email.value;
-                                const subject = e.target.subject.value;
-                                const message = e.target.message.value;
-                                window.location.href = `mailto:goodtroublers@iconnectcounseling.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                            }}>
+                            <form className="contact-form" ref={form} onSubmit={sendEmail}>
                                 <div className="form-group">
-                                    <label htmlFor="name">Name *</label>
-                                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                                    <label htmlFor="user_name">Name *</label>
+                                    <input type="text" id="user_name" name="user_name" placeholder="Your Name" required />
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="email">Email *</label>
-                                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                                    <label htmlFor="user_email">Email *</label>
+                                    <input type="email" id="user_email" name="user_email" placeholder="Your Email" required />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="subject">Subject</label>
@@ -88,7 +109,12 @@ const Contact = () => {
                                     <label htmlFor="message">Message</label>
                                     <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
                                 </div>
-                                <button type="submit" className="btn btn-primary">Send Message</button>
+                                {status.message && (
+                                    <p className={`status-message ${status.type}`}>{status.message}</p>
+                                )}
+                                <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </button>
                             </form>
                         </motion.div>
                     </div>

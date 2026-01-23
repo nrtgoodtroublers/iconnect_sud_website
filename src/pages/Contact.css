@@ -144,6 +144,28 @@
     margin-bottom: 1.5rem;
 }
 
+
+/* Status Messages */
+.status-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
