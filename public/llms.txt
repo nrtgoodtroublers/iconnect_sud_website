@@ -1,0 +1,43 @@
+# iConnect SUD Website
+
+> A non-profit organization dedicated to supporting individuals in recovery from Substance Use Disorders (SUD) through connection, technology, and community.
+
+## Core Mission
+To provide a digital ecosystem that bridges the gap between individuals in recovery and their support networks, facilitating long-term recovery success.
+
+## Site Structure & Content
+
+### [Home](/)
+- Overview of iConnect SUD
+- "Get in Touch" and App download calls-to-action
+- Introduction to the team and philosophy
+- Latest News and Updates
+
+### [About Us](/about)
+- **Our Story**: Founded by a multidisciplinary team at George Mason University.
+- **Mission**: Addressing the lack of social connection in recovery.
+- **Philosophy**: Inspired by John Lewis's "Good Trouble".
+
+### [Our Team](/team)
+- **Founders**: Holly Matto, Padmanabhan "Padhu" Seshaiyer, Siddartha Sikdar.
+- **Leadership**: Jasmine A (Executive Director), Rebecca Stone (Outreach).
+- **Tech Team**: Hector Chavarria (CTO), Krithika Jain (Lead), Gabriel Chavarria.
+- **Interns**: Supporters from various disciplines.
+
+### [The App](/app)
+- **iConnect Recovery App**: For individuals in recovery. Features: Check-ins, Resource Library, SOS Panic Button, Community Forum.
+- **Companion App**: For friends, family, and peer support specialists to stay connected.
+
+### [Vision](/vision)
+- Future goals: Expanding the "Recovery Community Organization" (RCO) model.
+- Research integration with CASBBI (Center for Adaptive Systems of Brain-Body Interactions).
+
+### [Contact](/contact)
+- Contact form for inquiries.
+- Location: George Mason University, Fairfax, VA.
+- Email: goodtroublers@iconnectcounseling.org
+
+## Technical Context
+- **Type**: Single Page Application (SPA) built with React.
+- **Navigation**: Client-side routing.
+- **Assets**: All images served from `/assets/`.

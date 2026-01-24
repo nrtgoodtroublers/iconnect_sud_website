@@ -24,6 +24,26 @@ const AppPage = () => {
             <Helmet>
                 <title>Mobile App | iConnect SUD</title>
                 <meta name="description" content="Download the iConnect SUD app for iOS and Android. Find resources, peer support, and recovery tools in your pocket." />
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "SoftwareApplication",
+                            "name": "iConnect SUD Resources",
+                            "operatingSystem": "iOS, Android",
+                            "applicationCategory": "HealthApplication",
+                            "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD"
+                            },
+                            "installUrl": [
+                                "https://apps.apple.com/us/app/iconnect-sud-resources/id6451077975",
+                                "https://play.google.com/store/apps/details?id=edu.gmu.casbbi.iconnect"
+                            ]
+                        }
+                    `}
+                </script>
             </Helmet>
             <div className="page-header">
                 <div className="container">

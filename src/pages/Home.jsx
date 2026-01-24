@@ -10,8 +10,26 @@ const Home = () => {
     return (
         <div className="home-page">
             <Helmet>
-                <title>iConnect SUD | Bridging Human Connections</title>
-                <meta name="description" content="iCONNECT is a non-profit organization dedicated to making substance use recovery accessible, supportive, and community-driven through technology and connection." />
+                <title>iConnect SUD | Bridging the Gap in Recovery</title>
+                <meta name="description" content="iConnect SUD connects individuals with substance use disorders with their support networks through technology making recovery accessible, supportive, and community-driven" />
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "NonprofitOrganization",
+                            "name": "iConnect SUD",
+                            "url": "https://iconnectcounseling.org",
+                            "logo": "https://iconnectcounseling.org/iconnect_logo.png",
+                            "description": "A non-profit organization dedicated to supporting individuals in recovery from Substance Use Disorders (SUD) through connection, technology, and community.",
+                            "sameAs": [
+                                "https://www.instagram.com/iconnect_sud/",
+                                "https://www.linkedin.com/company/iconnect-sud",
+                                "https://www.tiktok.com/@iconnect_sud",
+                                "https://www.facebook.com/iConnectSUD/"
+                            ]
+                        }
+                    `}
+                </script>
             </Helmet>
             {/* Hero Section */}
             <section className="hero">
