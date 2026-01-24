@@ -24,7 +24,7 @@ const Home = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="hero-animated-title">Bridging Human Connections</h1>
+                        <h1 className="hero-animated-title">iCONNECT SUD: Bridging Human Connections in Recovery</h1>
 
                         <div className="hero-buttons">
                             <Link to="/app" className="btn btn-primary">Download App</Link>
