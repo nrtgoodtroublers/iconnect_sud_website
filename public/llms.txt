@@ -1,7 +1,7 @@
 # iConnect SUD Website
+https://iconnectcounseling.org
 
 > A non-profit organization dedicated to supporting individuals in recovery from Substance Use Disorders (SUD) through connection, technology, and community.
-
 ## Core Mission
 To provide a digital ecosystem that bridges the gap between individuals in recovery and their support networks, facilitating long-term recovery success.
 
@@ -19,13 +19,12 @@ To provide a digital ecosystem that bridges the gap between individuals in recov
 - **Philosophy**: Inspired by John Lewis's "Good Trouble".
 
 ### [Our Team](/team)
-- **Founders**: Holly Matto, Padmanabhan "Padhu" Seshaiyer, Siddartha Sikdar.
-- **Leadership**: Jasmine A (Executive Director), Rebecca Stone (Outreach).
+- **Founders and Leadership**: Rebecca Leung and Dylan Scarton.
 - **Tech Team**: Hector Chavarria (CTO), Krithika Jain (Lead), Gabriel Chavarria.
 - **Interns**: Supporters from various disciplines.
 
 ### [The App](/app)
-- **iConnect Recovery App**: For individuals in recovery. Features: Check-ins, Resource Library, SOS Panic Button, Community Forum.
+- **iConnect Recovery App**: For individuals in recovery. Features: Resource Library, Near by services, and Community Forum.
 - **Companion App**: For friends, family, and peer support specialists to stay connected.
 
 ### [Vision](/vision)
