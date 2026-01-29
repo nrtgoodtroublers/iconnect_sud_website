@@ -26,3 +26,8 @@ dist-ssr
 
 # Security
 .env
+
+# Firebase generated files
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
