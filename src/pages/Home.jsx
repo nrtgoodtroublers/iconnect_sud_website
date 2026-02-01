@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className="home-page">
             <Helmet>
-                <title>iConnect SUD | Bridging Human Connections in Recovery</title>
+                <title>iCONNECT SUD | Bridging Human Connections in Recovery</title>
                 <meta name="description" content="iConnect SUD connects individuals with substance use disorders with their support networks through technology making recovery accessible, supportive, and community-driven" />
 
             </Helmet>
