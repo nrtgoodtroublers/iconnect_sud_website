@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
                             alt="iConnect Logo"
                             className="nav-logo-img"
                         />
+                        <span className="logo-text">iCONNECT SUD</span>
                     </Link>
 
                     <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">

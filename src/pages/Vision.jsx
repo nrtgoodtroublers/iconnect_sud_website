@@ -7,7 +7,7 @@ const Vision = () => {
     return (
         <div className="vision-page">
             <Helmet>
-                <title>Our Vision | iConnect SUD</title>
+                <title>Our Vision | iCONNECT SUD</title>
                 <meta name="description" content="Our vision for a future where recovery is accessible, celebrated, and sustainable through community connection." />
             </Helmet>
             <div className="page-header">

@@ -6,7 +6,7 @@ const Privacy = () => {
     return (
         <div className="privacy-page">
             <Helmet>
-                <title>Privacy Policy | iConnect SUD</title>
+                <title>Privacy Policy | iCONNECT SUD</title>
                 <meta name="description" content="Read our Privacy Policy to understand how we collect, use, and protect your information." />
             </Helmet>
             <div className="container">

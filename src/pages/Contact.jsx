@@ -35,7 +35,7 @@ const Contact = () => {
     return (
         <div className="contact-page">
             <Helmet>
-                <title>Contact Us | iConnect SUD</title>
+                <title>Contact Us | iCONNECT SUD</title>
                 <meta name="description" content="Get in touch with the iConnect team. We are here to help answering your questions or feedback." />
             </Helmet>
             <section className="section">

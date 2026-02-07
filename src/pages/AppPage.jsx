@@ -22,8 +22,8 @@ const AppPage = () => {
     return (
         <div className="app-page">
             <Helmet>
-                <title>Mobile App | iConnect SUD</title>
-                <meta name="description" content="Download the iConnect SUD app for iOS and Android. Find resources, peer support, and recovery tools in your pocket." />
+                <title>Mobile App | iCONNECT SUD</title>
+                <meta name="description" content="Download the iCONNECT SUD app for iOS and Android. Find resources, peer support, and recovery tools in your pocket." />
                 <script type="application/ld+json">
                     {`
                         {
@@ -32,6 +32,10 @@ const AppPage = () => {
                             "name": "iConnect SUD Resources",
                             "operatingSystem": "iOS, Android",
                             "applicationCategory": "HealthApplication",
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "4.8"
+                            },
                             "offers": {
                                 "@type": "Offer",
                                 "price": "0",

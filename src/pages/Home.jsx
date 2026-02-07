@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <div className="home-page">
             <Helmet>
-                <title>iCONNECT SUD | Bridging Human Connections in Recovery</title>
-                <meta name="description" content="iConnect SUD connects individuals with substance use disorders with their support networks through technology making recovery accessible, supportive, and community-driven" />
+                <title>iCONNECT SUD | iCONNECT Counseling | Bridging Human Connections in Recovery</title>
+                <meta name="description" content="iCONNECT SUD connects individuals with substance use disorders with their support networks through technology making recovery accessible, supportive, and community-driven" />
 
             </Helmet>
             {/* Hero Section */}
@@ -24,7 +24,7 @@ const Home = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="hero-animated-title">iCONNECT SUD: Bridging Human Connections in Recovery</h1>
+                        <h1 className="hero-animated-title">Bridging Human Connection in Recovery</h1>
 
                         <div className="hero-buttons">
                             <Link to="/app" className="btn btn-primary">Download App</Link>

@@ -130,8 +130,8 @@ const Team = () => {
     return (
         <div className="team-page">
             <Helmet>
-                <title>Our Team | iConnect SUD</title>
-                <meta name="description" content="Meet the dedicated iConnect SUD team. Researchers, clinicians, and community leaders working together to improve recovery outcomes." />
+                <title>Our Team | iCONNECT SUD</title>
+                <meta name="description" content="Meet the dedicated iCONNECT SUD team. Researchers, clinicians, and community leaders working together to improve recovery outcomes." />
             </Helmet>
             <div className="page-header">
                 <div className="container">
