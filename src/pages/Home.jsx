@@ -6,6 +6,51 @@ import './Home.css';
 
 import { Helmet } from 'react-helmet-async';
 
+const newsItems = [
+    {
+        id: "award",
+        isNew: true,
+        title: "Recovery Project Coordinator Award",
+        description: "We are honored to announce that iCONNECT SUD at George Mason University has been awarded a Recovery Project Coordinator position for the 2026-2027 year! This award from Ampact and AmeriCorps strengthens our partnership.",
+        imageStyle: { backgroundImage: 'url(/assets/recovery_award.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: '#ffffff' },
+        link: "https://www.recoverycorps.us/",
+        linkText: "Visit Recovery Corps"
+    },
+    {
+        id: "google",
+        isNew: true,
+        title: "Google Cloud Credits",
+        description: "We are incredibly grateful to receive Google Cloud credits in both September 2024 ($1,000) and December 2025. These vital funds directly support the hosting and database infrastructure of the iCONNECT SUD mobile app.",
+        imageStyle: { backgroundImage: 'url(https://images.seeklogo.com/logo-png/33/1/google-cloud-logo-png_seeklogo-336116.png)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: '#fff' },
+        link: "https://edu.google.com/intl/ALL_us/programs/credits/research/?modal_active=none",
+        linkText: "Read More"
+    },
+    {
+        id: "recovery",
+        title: "Recovery Corps Partnership",
+        description: "iCONNECT is ecstatic to announce that we have been selected as a Site Partner with the Recovery Corps division of AmeriCorps Ampact for the 2025-2026 year!",
+        imageStyle: { backgroundImage: 'url(https://media.istockphoto.com/id/1530248119/photo/rear-view-of-female-nurses-walking-with-coworkers-in-hospital-corridor.jpg?s=612x612&w=0&k=20&c=MBjYj5hvB1FwcBZvymZP-WfBF6u6B_KUVDdUr1Dhm5Q=)' },
+        link: "https://www.recoverycorps.us/",
+        linkText: "Visit Recovery Corps"
+    },
+    {
+        id: "grant",
+        title: "Grant Received!",
+        description: "Our team, iCONNECT, was thrilled to be awarded a $5K VentureWell E-Team Grant after being accepted into their Pioneer early-stage innovator training program!",
+        imageStyle: { backgroundImage: 'url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80)' },
+        link: "https://venturewell.org/summer-2023-e-team/?utm_source=social&utm_medium=Facebook&utm_campaign=P_2023+Summer+E-Teams+Outreach+-+Registration",
+        linkText: "Read about VentureWell"
+    },
+    {
+        id: "mit",
+        title: "MIT Solve Submission",
+        description: "Check out our submission to the MIT Solve Global Challenges. We are proud to share our innovative approach to tackling substance use disorders.",
+        imageStyle: { backgroundImage: 'url(https://d3t35pgnsskh52.cloudfront.net/uploads/conversions/55968_SAM%20COVER%20PHOTO-responsive.jpg)' },
+        link: "https://solve.mit.edu/solutions/72996",
+        linkText: "View Submission"
+    }
+];
+
 const Home = () => {
     return (
         <div className="home-page">
@@ -114,95 +159,30 @@ const Home = () => {
             <section className="section news-section">
                 <div className="container">
                     <h2 className="section-title">Latest News & Milestones</h2>
-                    <div className="news-grid-animated">
-                        {/* 1. Google Cloud Credits */}
-                        <motion.div
-                            className="news-card"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <div className="news-image" style={{ backgroundImage: 'url(https://images.seeklogo.com/logo-png/33/1/google-cloud-logo-png_seeklogo-336116.png', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}></div>
-                            <div className="news-content">
-                                <h3>Google Cloud Credits</h3>
-                                <p>
-                                    We are incredibly grateful to receive Google Cloud credits in both September 2024 ($1,000) and December 2025. These vital funds directly support the hosting and database infrastructure of the iCONNECT SUD mobile app on the Google Cloud Platform, ensuring our community resources remain accessible and secure.
-                                </p>
-                                <div className="news-actions">
-                                    <a href="https://edu.google.com/intl/ALL_us/programs/credits/research/?modal_active=none" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                                        Read More
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
 
-                        {/* 2. Recovery Corps Partnership */}
-                        <motion.div
-                            className="news-card"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                        >
-                            <div className="news-image" style={{ backgroundImage: 'url(https://media.istockphoto.com/id/1530248119/photo/rear-view-of-female-nurses-walking-with-coworkers-in-hospital-corridor.jpg?s=612x612&w=0&k=20&c=MBjYj5hvB1FwcBZvymZP-WfBF6u6B_KUVDdUr1Dhm5Q=)' }}></div>
-                            <div className="news-content">
-                                <h3>Recovery Corps Partnership</h3>
-                                <p>
-                                    iCONNECT is ecstatic to announce that we have been selected as a Site Partner with the Recovery Corps division of AmeriCorps Ampact for the 2025-2026 year!
-                                    In conjunction with the <a href="https://cassbi.gmu.edu/" target="_blank" rel="noopener noreferrer" className="text-link">Center for Advancing Systems Science and Bioengineering Innovation (CASBBI)</a> at George Mason University.
-                                </p>
-                                <div className="news-actions">
-                                    <a href="https://www.recoverycorps.us/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                                        Visit Recovery Corps
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* 3. Grant Received */}
-                        <motion.div
-                            className="news-card"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                        >
-                            <div className="news-image" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80)' }}></div>
-                            <div className="news-content">
-                                <h3>Grant Received!</h3>
-                                <p>
-                                    Our team, iCONNECT, was thrilled to be awarded a $5K VentureWell E-Team Grant after being accepted into their Pioneer early-stage innovator training program! Over the course of a 2-day entrepreneurship workshop in July 2023.
-                                </p>
-                                <div className="news-actions">
-                                    <a href="https://venturewell.org/summer-2023-e-team/?utm_source=social&utm_medium=Facebook&utm_campaign=P_2023+Summer+E-Teams+Outreach+-+Registration" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                                        Read about VentureWell
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* 4. MIT Solve Submission */}
-                        <motion.div
-                            className="news-card"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                        >
-                            <div className="news-image" style={{ backgroundImage: 'url(https://d3t35pgnsskh52.cloudfront.net/uploads/conversions/55968_SAM%20COVER%20PHOTO-responsive.jpg)' }}></div>
-                            <div className="news-content">
-                                <h3>MIT Solve Submission</h3>
-                                <p>
-                                    Check out our submission to the MIT Solve Global Challenges. We are proud to share our innovative approach to tackling substance use disorders.
-                                </p>
-                                <div className="news-actions">
-                                    <a href="https://solve.mit.edu/solutions/72996" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                                        View Submission
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
+                    <div className="news-ticker-container">
+                        <div className="news-ticker-track">
+                            {[...Array(2)].map((_, i) => (
+                                <React.Fragment key={i}>
+                                    {newsItems.map(item => (
+                                        <div className="news-card" key={item.id}>
+                                            <div className="news-image" style={item.imageStyle}>
+                                                {item.isNew && <span className="new-tag">NEW</span>}
+                                            </div>
+                                            <div className="news-content">
+                                                <h3>{item.title}</h3>
+                                                <p>{item.description}</p>
+                                                <div className="news-actions">
+                                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
+                                                        {item.linkText}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </React.Fragment>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Press Section */}
