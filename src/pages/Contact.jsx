@@ -55,7 +55,7 @@ const Contact = () => {
                                 <span className="icon">📧</span>
                                 <div>
                                     <strong>Email</strong>
-                                    <p>goodtroublers@iconnectcounseling.org</p>
+                                    <p>support@iconnectcounseling.org</p>
                                 </div>
                             </div>
 
