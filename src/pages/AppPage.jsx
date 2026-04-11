@@ -34,7 +34,8 @@ const AppPage = () => {
                             "applicationCategory": "HealthApplication",
                             "aggregateRating": {
                                 "@type": "AggregateRating",
-                                "ratingValue": "4.8"
+                                "ratingValue": "4.8",
+                                "ratingCount": "24"
                             },
                             "offers": {
                                 "@type": "Offer",
