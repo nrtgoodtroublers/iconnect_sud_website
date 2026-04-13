@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FiUsers, FiCompass, FiHeart } from 'react-icons/fi';
 import './Home.css';
-
 import { Helmet } from 'react-helmet-async';
 
 const newsItems = [
@@ -96,15 +96,15 @@ const Home = () => {
                         </p>
                         <div className="cards-grid">
                             <div className="card">
-                                <h3>Connect</h3>
+                                <h3><FiUsers className="card-icon" /> Connect</h3>
                                 <p>Building bridges between individuals and support systems.</p>
                             </div>
                             <div className="card">
-                                <h3>Discover</h3>
+                                <h3><FiCompass className="card-icon" /> Discover</h3>
                                 <p>Helping you find the right path to recovery and wellness.</p>
                             </div>
                             <div className="card">
-                                <h3>Support</h3>
+                                <h3><FiHeart className="card-icon" /> Support</h3>
                                 <p>Providing tools and community for sustainable growth.</p>
                             </div>
                         </div>

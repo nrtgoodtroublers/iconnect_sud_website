@@ -193,6 +193,16 @@
     color: var(--color-primary-green);
     margin-bottom: 1rem;
     font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--color-accent-orange);
+    /* Adding a subtle margin-top if needed to perfectly align visually with text, but flex center usually handles it */
 }
 
 .mt-4 {
