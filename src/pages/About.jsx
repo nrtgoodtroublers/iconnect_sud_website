@@ -5,6 +5,7 @@ import './About.css';
 
 const About = () => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isDylanExpanded, setIsDylanExpanded] = useState(false);
 
     return (
         <div className="about-page">
@@ -26,7 +27,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="section about-content-section">
+            <section className="section about-content-section" style={{ paddingBottom: '1rem' }}>
                 <div className="container">
                     <div className="about-grid">
                         <motion.div
@@ -104,102 +105,197 @@ const About = () => {
             </section>
 
             {/* Co-Founder Section - Expandable Card Layout */}
-            <section className="section co-founder-section">
-                <div className="container" style={{ maxWidth: '100%' }}> {/* Allow full width of main container */}
-                    <h2 className="section-title" style={{ marginBottom: '3rem' }}>Meet Our Co-Founder</h2>
+            <section className="section co-founder-section" style={{ paddingTop: '0' }}>
+                <div className="container" style={{ maxWidth: '100%', padding: '0 5%' }}> {/* Allow full width but keep side padding */}
+                    <h2 className="section-title" style={{ marginTop: '0', marginBottom: '2rem' }}>Meet Our Co-Founders</h2>
 
-                    <motion.div
-                        layout
-                        className="co-founder-card"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ layout: { duration: 0.4, type: "spring", stiffness: 100 } }}
-                        style={{
-                            maxWidth: isExpanded ? '1400px' : '650px', // Increased widths
-                            gap: isExpanded ? '4rem' : '0', // More gap for wider layout
-                        }}
-                    >
-                        {/* Left Side: Profile & CTA (Always Visible) */}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', width: '100%', justifyContent: 'center' }}>
                         <motion.div
                             layout
-                            className="co-founder-sidebar"
+                            className="co-founder-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ layout: { duration: 0.4, type: "spring", stiffness: 100 } }}
                             style={{
-                                flex: isExpanded ? '0 0 350px' : '1',
+                                display: isDylanExpanded ? 'none' : 'flex',
+                                flex: isExpanded ? '2.5' : '1',
+                                gap: isExpanded ? '4rem' : '0',
+                                minWidth: '350px',
+                                maxWidth: isExpanded ? '1400px' : '700px',
                             }}
                         >
-                            <img
-                                src="/assets/rebecca.jpg"
-                                alt="Rebecca Leung"
-                                className="co-founder-img"
-                            />
-                            <div className="co-founder-info">
-                                <h4 className="co-founder-name">Rebecca Leung</h4>
-                                <p className="co-founder-creds">MSW, LCSW, MBA</p>
-                            </div>
-                            <p className="quote-text-centered">
-                                "Recovery is about connections. At iCONNECT SUD, we build digital tools to bridge connections, so individuals do not have to walk that journey alone."
-                            </p>
+                            {/* Left Side: Profile & CTA (Always Visible) */}
+                            <motion.div
+                                layout
+                                className="co-founder-sidebar"
+                                style={{
+                                    flex: isExpanded ? '0 0 350px' : '1',
+                                }}
+                            >
+                                <img
+                                    src="/assets/rebecca.jpg"
+                                    alt="Rebecca Leung"
+                                    className="co-founder-img"
+                                />
+                                <div className="co-founder-info">
+                                    <h4 className="co-founder-name">Rebecca Leung</h4>
+                                    <p className="co-founder-creds">MSW, LCSW, MBA</p>
+                                </div>
+                                <p className="quote-text-centered">
+                                    "Recovery is about connections. At iCONNECT SUD, we build digital tools to bridge connections, so individuals do not have to walk that journey alone."
+                                </p>
 
-                            {/* Toggle Button - Only show if not expanded */}
-                            {!isExpanded && (
+                                {/* Toggle Button */}
                                 <motion.button
                                     layout
-                                    onClick={() => setIsExpanded(true)}
+                                    onClick={() => setIsExpanded(!isExpanded)}
                                     className="btn btn-outline-primary btn-toggle-story"
+                                    style={{ alignSelf: 'center' }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
-                                    Read Rebecca's Story →
+                                    {isExpanded ? "← Read Dylan's Story" : "Read Rebecca's Story →"}
                                 </motion.button>
-                            )}
 
-                            {/* CTA - Always Visible */}
-                            <div className="co-founder-cta-container">
-                                <p className="cta-prompt">
-                                    All inquiries are confidential.
-                                </p>
-                                <div className="co-founder-cta">
-                                    <a href="https://virginiatelementalhealth.org/team/rebecca-leung/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-pill">
-                                        Reach Out for Counseling
-                                    </a>
-                                    <a href="mailto:Rebecca@iConnectCounseling.org" className="btn btn-secondary btn-pill">
-                                        Email Rebecca
-                                    </a>
+                                {/* CTA - Always Visible */}
+                                <div className="co-founder-cta-container">
+                                    <p className="cta-prompt">
+                                        All inquiries are confidential.
+                                    </p>
+                                    <div className="co-founder-cta">
+                                        <a href="https://virginiatelementalhealth.org/team/rebecca-leung/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-pill">
+                                            Reach Out for Counseling
+                                        </a>
+                                        <a href="mailto:rebecca@iconnectcounseling.org" className="btn btn-secondary btn-pill">
+                                            Email Rebecca
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                            </motion.div>
+
+                            {/* Right Side: Expandable Bio */}
+                            <AnimatePresence>
+                                {isExpanded && (
+                                    <motion.div
+                                        className="co-founder-bio"
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: 20 }}
+                                        transition={{ duration: 0.4 }}
+                                    >
+                                        <h3 className="bio-title">The Journey Behind iCONNECT SUD</h3>
+                                        <p className="bio-text">
+                                            Rebecca's vision for iCONNECT SUD lives at the intersection of health IT and compassionate social work. It stems from personal experience. She spent the first part of her career innovating healthcare technology, while working on a project with biometrics and wearable devices, a colleague’s son died from overdose, alone. Had he been better connected to available support when he needed it, it could perhaps have been prevented.
+                                        </p>
+                                        <p className="bio-text">
+                                            <span className="bio-inline-highlight">"In a digital age, no one needs to be on their recovery journey alone."</span> Rebecca decided to use her technology experience to help families and individuals suffering from substance use issues. However, technology alone cannot solve the problem. So, Rebecca went back to school and earned her master’s in social work.
+                                        </p>
+                                        <p className="bio-text">
+                                            Now in the second part of her career, Rebecca combines technology with counseling. As a graduate student-researcher, she co-hosted focus groups with Dylan to explore the needs of those in recovery and co-founded iCONNECT SUD, to connect individuals with resources that support their recovery journey.
+                                        </p>
+                                        <p className="bio-text">
+                                            She regularly sees clients, supporting those with depression, anxiety, life transitions, substance use challenges, and those seeking to enhance life skills and relationships. She employs a holistic and collaborative therapeutic approach, integrating mind and body while drawing upon evidence-based methods such as Cognitive Behavioral Therapy (CBT), Dialectical Behavioral Therapy (DBT), trauma-informed care, and family systems therapy to engage, empower, and support her clients.
+                                        </p>
+                                        <p className="bio-text">
+                                            Rebecca has an MSW from George Mason University, an MBA from Harvard and a BS from UC Berkeley.
+                                        </p>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </motion.div>
 
-                        {/* Right Side: Expandable Bio */}
-                        <AnimatePresence>
-                            {isExpanded && (
-                                <motion.div
-                                    className="co-founder-bio"
-                                    initial={{ opacity: 0, x: 20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: 20 }}
-                                    transition={{ duration: 0.4 }}
+                        {/* Dylan's Card */}
+                        <motion.div
+                            layout
+                            className="co-founder-card"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ layout: { duration: 0.4, type: "spring", stiffness: 100 } }}
+                            style={{
+                                display: isExpanded ? 'none' : 'flex',
+                                flex: isDylanExpanded ? '2.5' : '1',
+                                gap: isDylanExpanded ? '4rem' : '0',
+                                minWidth: '350px',
+                                maxWidth: isDylanExpanded ? '1400px' : '700px',
+                            }}
+                        >
+                            <motion.div
+                                layout
+                                className="co-founder-sidebar"
+                                style={{
+                                    flex: isDylanExpanded ? '0 0 350px' : '1',
+                                }}
+                            >
+                                <img
+                                    src="/assets/dylan.jpg"
+                                    alt="Dylan Scarton"
+                                    className="co-founder-img"
+                                />
+                                <div className="co-founder-info">
+                                    <h4 className="co-founder-name">Dylan Scarton</h4>
+                                    <p className="co-founder-creds">BS, MS, PhD</p>
+                                </div>
+                                <p className="quote-text-centered">
+                                    "Our mission isn't just to build an app;
+                                    <br />it's to build a sustainable ecosystem of support."
+                                </p>
+
+                                {/* Toggle Button */}
+                                <motion.button
+                                    layout
+                                    onClick={() => setIsDylanExpanded(!isDylanExpanded)}
+                                    className="btn btn-outline-primary btn-toggle-story"
+                                    style={{ alignSelf: 'center' }}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
                                 >
-                                    <h3 className="bio-title">The Journey Behind iCONNECT SUD</h3>
-                                    <p className="bio-text">
-                                        Rebecca's vision for iCONNECT SUD lives at the intersection of health IT and compassionate social work. It stems from personal experience. She spent the first part of her career innovating healthcare technology, while working on a project with biometrics and wearable devices, a colleague’s son died from overdose, alone. Had he been better connected to available support when he needed it, it could perhaps have been prevented.
+                                    {isDylanExpanded ? "← Read Rebecca's Story" : "Read Dylan's Story →"}
+                                </motion.button>
+
+                                <div className="co-founder-cta-container">
+                                    <p className="cta-prompt">
+                                        Reach out to Dylan
                                     </p>
-                                    <p className="bio-text">
-                                        <span className="bio-inline-highlight">"In a digital age, no one needs to be on their recovery journey alone."</span> Rebecca decided to use her technology experience to help families and individuals suffering from substance use issues. However, technology alone cannot solve the problem. So, Rebecca went back to school and earned her master’s in social work.
-                                    </p>
-                                    <p className="bio-text">
-                                        Now in the second part of her career, Rebecca combines technology with counseling. As a graduate student-researcher, she co-hosted focus groups with Dylan to explore the needs of those in recovery and co-founded iCONNECT SUD, to connect individuals with resources that support their recovery journey.
-                                    </p>
-                                    <p className="bio-text">
-                                        She regularly sees clients, supporting those with depression, anxiety, life transitions, substance use challenges, and those seeking to enhance life skills and relationships. She employs a holistic and collaborative therapeutic approach, integrating mind and body while drawing upon evidence-based methods such as Cognitive Behavioral Therapy (CBT), Dialectical Behavioral Therapy (DBT), trauma-informed care, and family systems therapy to engage, empower, and support her clients.
-                                    </p>
-                                    <p className="bio-text">
-                                        Rebecca has an MSW from George Mason University, an MBA from Harvard and a BS from UC Berkeley.
-                                    </p>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </motion.div>
+                                    <div className="co-founder-cta">
+                                        <a href="mailto:dylan@iconnectcounseling.org" className="btn btn-secondary btn-pill">
+                                            Email Dylan
+                                        </a>
+                                    </div>
+                                </div>
+                            </motion.div>
+
+                            <AnimatePresence>
+                                {isDylanExpanded && (
+                                    <motion.div
+                                        className="co-founder-bio"
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: 20 }}
+                                        transition={{ duration: 0.4 }}
+                                    >
+                                        <h3 className="bio-title">The Research and Innovation Behind iCONNECT SUD</h3>
+                                        <p className="bio-text">
+                                            Dylan’s commitment to iCONNECT SUD is rooted in his belief that the most complex health challenges require a strong scientific foundation paired with human-centered design. As a neuroscientist, he has spent his career learning about the intricacies of the brain, from the origins of neurodegenerative diseases to the molecular mechanics of recovery.
+                                        </p>
+                                        <p className="bio-text">
+                                            During his doctoral studies, Dylan recognized a critical gap: while our understanding of substance use disorder has advanced considerably since the turn of the century, the practical tools for those in recovery have remained largely stagnant. <span className="bio-inline-highlight">"To truly support someone, we have to bridge the gap between the laboratory and the living room."</span>
+                                        </p>
+                                        <p className="bio-text">
+                                            This conviction led Dylan to partner with Rebecca. The two met during their time in a year-long, community-focused research traineeship at George Mason University, where they bonded over their shared personal experiences with the opioid epidemic. Together, they conducted focus groups to listen directly to the recovery community, ensuring that the tool they built was not just "smart" but also deeply intuitive and responsive to real-world needs. By focusing on evidence-based design thinking, Dylan ensures that every feature of iCONNECT SUD is carefully considered and built with thoughtful purpose. He collaborates closely with his cofounder to secure the strategic partnerships and critical funding necessary to bring iCONNECT’s vision to life.
+                                        </p>
+                                        <p className="bio-text">
+                                            In addition to his leadership at iCONNECT, Dylan is an industry researcher and program manager with Capra Biosciences, where he supports the development of sustainable chemical manufacturing efforts through natural biological processes to produce high-performance and renewable chemicals. His prior work in DNA nanotechnology and regenerative medicine explored how better health outcomes can be engineering at the molecular level. He brings this same precision to the development of our platforms, focusing on how data and technology can be leveraged to empower individuals rather than overwhelm them.
+                                        </p>
+                                        <p className="bio-text">
+                                            Dylan earned his BS in interdisciplinary studies with a concentration in neuroscience and a minor in mathematics from William & Mary before completing his PhD in neuroscience at George Mason University. He also holds an MS in molecular biotechnology from the University of Houston-Clear Lake and loves challenging himself to explore new ways of solving important problems.
+                                        </p>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -243,7 +339,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-        </div >
+        </div>
     );
 };
 

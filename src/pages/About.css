@@ -157,6 +157,7 @@
 /* Co-Founder Section Styles */
 .co-founder-section {
     background-color: #fdfdfd;
+    padding-top: 2rem;
 }
 
 .co-founder-card {
@@ -186,6 +187,7 @@
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top center;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     margin-bottom: 1.5rem;
 }
@@ -322,4 +324,12 @@
         padding-left: 0;
         padding-top: 2rem;
     }
+}
+
+.co-founder-bio {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: none;
 }
